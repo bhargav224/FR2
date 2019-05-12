@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        
+        
+        
+        
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/food_recipe</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">0065</property>
+        
+        <property name="hibernate.show_sql">true</property>
+        
+        <!-- create table if not -->
+        <property name="hbm2ddl.auto">update</property>
+       
+       
+       
+       <mapping class="fr.Recipe" />
+        <mapping class="fr.Address" />
+       
+        <mapping class="fr.RecipeImage" />
+        <mapping class="fr.Cusine" />
+        <mapping class="fr.Level" />  
+        
+       
+       
+        <mapping class="fr.Measurement"/>
+        <mapping class="fr.NutritionInformation"/>
+       <mapping class="fr.Restaurant"/>
+       <mapping class="fr.RecipeHasStep" />
+       <mapping class="fr.RecipeStep" />
+       
+       <mapping class="fr.FoodCategorie" />
+       <mapping class="fr.Course" />
+       
+       
+       <mapping class="fr.MenuItem" />
+       <mapping class="fr.MenuRecipe" />
+       <mapping class="fr.RestaurantMenu" />
+       <mapping class="fr.User" />
+       <mapping class="fr.FootNote" />
+       <mapping class="fr.Ingredient" />
+       <mapping class="fr.RecipeIngredient" />
+       
+      
+       
+       <mapping class="fr.IngredientNutritionInformation" />
+      
+       <mapping class="fr.ShareRecipe" />
+       <mapping class="fr.RecipeLike" />
+       <mapping class="fr.RecipeRating" />
+       <mapping class="fr.RecipeComment" />
+       <mapping class="fr.UserRating" />
+       <mapping class="fr.InviteContact"/>
+       <mapping class="fr.InviteEmail" />
+       <mapping class="fr.ChefProfile" />
+       
+       
+
+    </session-factory>
+</hibernate-configuration>
